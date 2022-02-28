@@ -13,3 +13,7 @@ Imago (image in Latin) is a small image manager and create your own gallery with
 
 # Imago Entity Relationship Model
 ![Imago ER Model](https://raw.githubusercontent.com/AFelipeTrujillo/imago-laravel-gallery-manager/main/Imago.entity%E2%80%93relationship-model.png)
+
+# Physical Data Model
+
+![Imago EER Model Mysql Workbech](https://github.com/AFelipeTrujillo/imago-laravel-gallery-manager/blob/main/Imago.entity%E2%80%93relationship-model-workbench.png?raw=true)
