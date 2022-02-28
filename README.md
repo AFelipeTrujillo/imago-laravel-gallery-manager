@@ -1,7 +1,7 @@
 # imago-laravel-gallery-manager
 Imago (image in Latin) is a small image manager and create your own gallery with Laravel.
 
-#Bussines Rules (User Stories)
+# Bussines Rules (User Stories)
 ## Version 1
 * The user must be able to create an account with their email and password
 * The application must manage three roles, administrator user and editor
