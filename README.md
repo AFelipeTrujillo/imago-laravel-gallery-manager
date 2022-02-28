@@ -9,3 +9,7 @@ Imago (image in Latin) is a small image manager and create your own gallery with
 * Editor users can add a category to the image and multiple tags
 * In the application there must be a public gallery with all the images of the users
 * In the application there must be a view with the images by category and tags
+
+
+# Imago Entity Relationship Model
+![Imago ER Model](https://raw.githubusercontent.com/AFelipeTrujillo/imago-laravel-gallery-manager/main/Imago.entity%E2%80%93relationship-model.png)
