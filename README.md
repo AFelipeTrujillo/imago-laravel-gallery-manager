@@ -18,6 +18,20 @@ Imago (image in Latin) is a small image manager and create your own gallery with
 
 ![Imago EER Model Mysql Workbech](https://github.com/AFelipeTrujillo/imago-laravel-gallery-manager/blob/main/Imago.entity%E2%80%93relationship-model-workbench.png?raw=true)
 
+# Stack
+
+* PHP
+* Laravel
+* Taildwild CSS: is basically a utility-first CSS framework for rapidly building custom user interfaces
+* Jetstream: is a beautifully designed application starter kit for Laravel and provides the perfect starting point for your next Laravel applicatio
+* Liveware: is a full-stack framework for Laravel that makes building dynamic interfaces simple, without leaving the comfort of Laravel
+
+## Installation 
+```
+laravel new imago --jet
+[*] liveware
+```
+
 # Models and migrate files
 
 ## Categories
@@ -43,6 +57,40 @@ php artisan make:model Tag -mcsf
 Schema::create('tags', function (Blueprint $table) {
     $table->id();
     $table->string('title', 45);
+    $table->timestamps();
+});
+```
+
+## Roles
+Create model, controller, seeder and factory
+```
+php artisan make:model Role -mcsf
+```
+📋 __2022_03_01_013234_create_roles_table__
+```
+Schema::create('roles', function (Blueprint $table) {
+    $table->id();
+    $table->string('name', 45);
+    $table->timestamps();
+});
+```
+
+## Images
+Create model, controller, seeder and factory
+```
+php artisan make:model Image -mcsf
+```
+```
+Schema::create('images', function (Blueprint $table) {
+    $table->id();
+    $table->string('title',45);
+    $table->string('url',255);
+    $table->unsignedBigInteger('user_id')->nullable();
+    $table->unsignedBigInteger('category_id')->nullable();
+    # One - to - Many
+    $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+    # One - to - Many
+    $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null');
     $table->timestamps();
 });
 ```
