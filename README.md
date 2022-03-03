@@ -28,8 +28,10 @@ Imago (image in Latin) is a small image manager and create your own gallery with
 
 ## Installation 
 ```
-laravel new imago --jet
-[*] liveware
+laravel new imago
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install && npm run dev 
 ```
 
 # Models and migrate files
@@ -42,7 +44,7 @@ php artisan make:model Category -m
 ```
 Schema::create('categories', function (Blueprint $table) {
     $table->id();
-    $table->string('title', 45);
+    $table->string('name', 45);
     $table->timestamps();
 });
 ```
@@ -56,7 +58,7 @@ php artisan make:model Tag -mcsf
 ```
 Schema::create('tags', function (Blueprint $table) {
     $table->id();
-    $table->string('title', 45);
+    $table->string('name', 45);
     $table->timestamps();
 });
 ```
